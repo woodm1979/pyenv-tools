@@ -1,0 +1,7 @@
+pip
+virtualenv
+
+black
+pre-commit
+pyflakes
+pylint
