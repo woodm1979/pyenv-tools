@@ -9,8 +9,11 @@ set -x
 
 export PYENV_VERSION='system'
 brew update
-brew install pyenv
-brew upgrade pyenv
+if brew list -1 | grep -e '^pyenv$'; then
+	brew upgrade pyenv
+else
+	brew install pyenv
+fi
 
 for VERSION in $VERSIONS; do
     pyenv install --skip-existing $VERSION
