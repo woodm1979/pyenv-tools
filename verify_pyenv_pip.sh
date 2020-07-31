@@ -2,7 +2,7 @@
 
 export PIP_REQUIRE_VIRTUALENV=false
 
-for VERSION in $(pyenv versions --bare | sed 's/\*//' | tr -s ' ' | cut -d ' ' -f 2); do
+for VERSION in $(pyenv versions --bare --skip-aliases | grep -v '/usr/local/Cellar' | sed 's/\*//' | tr -s ' ' | cut -d ' ' -f 2); do
     echo $VERSION
     echo "Installing requirements for $VERSION"
     export PYENV_VERSION=$VERSION
