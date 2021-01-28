@@ -4,3 +4,5 @@ virtualenv
 black
 pyflakes
 pylint
+
+wifi-password
