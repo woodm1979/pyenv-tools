@@ -9,5 +9,6 @@ for VERSION in $(pyenv versions --bare | grep -v '/usr/local/Cellar' | sed 's/\*
     python --version
     pip --version 
     pyenv which pip
+    pip install --upgrade pip
     pip cache purge
 done

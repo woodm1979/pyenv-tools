@@ -22,3 +22,4 @@ done
 pyenv global $GLOBAL_VERSION
 
 $DIR/verify_pyenv_pip.sh
+$DIR/clear_pyenv_pip_cache.sh
